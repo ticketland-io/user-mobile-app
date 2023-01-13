@@ -53,7 +53,7 @@ const Section = ({children, title}) => {
   );
 }
 
-const App = () => {
+const Login = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -113,4 +113,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Login;
