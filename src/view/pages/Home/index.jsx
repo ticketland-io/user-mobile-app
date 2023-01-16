@@ -15,6 +15,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {Circle} from 'react-native-progress';
 import {
   Colors,
   DebugInstructions,
@@ -22,6 +23,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import AsyncButton from '../../components/AsyncButton';
 
 const SectionProps = {
   title: ''
@@ -53,7 +55,7 @@ const Section = ({children, title}) => {
   );
 }
 
-const Login = () => {
+const Home = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
@@ -62,6 +64,9 @@ const Login = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
+      <AsyncButton loading={true}>
+        Home
+      </AsyncButton>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -113,4 +118,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Home;
