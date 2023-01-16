@@ -10,7 +10,6 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import styles from './styles'
 
-
 const Router = props => {
   const classes = styles()
 
