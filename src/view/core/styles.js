@@ -1,4 +1,4 @@
-import makeStyles from '@mui/styles/makeStyles'
+import {makeStyles} from '@rneui/themed'
 
 export default makeStyles(theme => ({
   root: {

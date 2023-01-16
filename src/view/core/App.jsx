@@ -1,25 +1,24 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
-import React from 'react';
-import {ThemeProvider} from '@rneui/themed';
-import Login from '../pages/login/Login'
+import React from 'react'
+import {ThemeProvider} from '@rneui/themed'
 import {getTheme} from './theme'
+import Router from './Router'
+import Auth from '../components/Auth'
+import Store from './Store'
 
 const theme = getTheme()
 
 const App = () => {
 
   return (
-    <ThemeProvider theme={theme}>
-      <Login />
-    </ThemeProvider>
-  );
+    <Store>
+      <ThemeProvider theme={theme}>
+        <Auth />
+        <Router />
+      </ThemeProvider>
+    </Store>
+
+  )
 }
 
 
-export default App;
+export default App
