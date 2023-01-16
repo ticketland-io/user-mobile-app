@@ -9,7 +9,6 @@ const Auth = () => {
     state.firebase.onUserChanged(currentUser => {
       dispatch(setUser(currentUser))
     })
-
   }, [])
 
   return null
