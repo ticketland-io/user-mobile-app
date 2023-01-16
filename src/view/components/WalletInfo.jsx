@@ -19,7 +19,6 @@ const WalletInfo = props => {
 
       setTimeout(poll, 1000)
     }
-
     
     state.web3 && loadAccountInfo().catch(error => console.log('Error loading account info ', error))
   }, [state.web3])
