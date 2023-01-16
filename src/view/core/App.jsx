@@ -16,7 +16,6 @@ const App = () => {
         <Router />
       </ThemeProvider>
     </Store>
-
   )
 }
 
