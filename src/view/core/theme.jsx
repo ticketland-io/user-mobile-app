@@ -33,15 +33,6 @@ const colors = {
 }
 
 export const getTheme = () => createTheme({
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1280,
-      xl: 1920
-    }
-  },
   palette: {
     type: 'light',
     text: {
@@ -62,5 +53,4 @@ export const getTheme = () => createTheme({
       ...colors
     }
   },
-  spacing: 4,
 })
