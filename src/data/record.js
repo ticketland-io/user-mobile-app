@@ -3,6 +3,7 @@ import Record from '@ppoliani/im-record'
 import auth from '@react-native-firebase/auth'
 import jwt_decode from "jwt-decode";
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {LoginManager, AccessToken} from 'react-native-fbsdk-next';
 
 const googleConfigure = () => {
   if (Platform.OS === 'ios') {
@@ -16,13 +17,31 @@ const googleConfigure = () => {
 
 const signInWithGoogle = async () => {
   googleConfigure()
-  
+
   await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
 
   const {idToken} = await GoogleSignin.signIn();
   const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
   return auth().signInWithCredential(googleCredential);
+}
+
+const signInWithFacebook = async () => {
+  const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
+
+  if (result.isCancelled) {
+    throw 'User cancelled the login process';
+  }
+
+  const data = await AccessToken.getCurrentAccessToken();
+
+  if (!data) {
+    throw 'Something went wrong obtaining access token';
+  }
+
+  const facebookCredential = auth.FacebookAuthProvider.credential(data.accessToken);
+
+  return auth().signInWithCredential(facebookCredential);
 }
 
 const curAuth = auth()
@@ -44,6 +63,7 @@ const signOutUser = () => curAuth.signOut()
 const Auth = Record({
   googleConfigure,
   signInWithGoogle,
+  signInWithFacebook,
   signOutUser,
   onUserChanged,
   accessToken
