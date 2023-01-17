@@ -14,7 +14,7 @@ const Login = () => {
           break;
         }
         case 'facebook': {
-          console.log(provider)
+          await state.firebase.signInWithFacebook()
           break;
         }
         default:
@@ -28,7 +28,7 @@ const Login = () => {
 
   return (
     <SafeAreaView >
-      <AsyncButton loading={false} onPress={logIn('google')}>
+      <AsyncButton loading={false} onPress={logIn('facebook')}>
         Login
       </AsyncButton>
     </SafeAreaView>
