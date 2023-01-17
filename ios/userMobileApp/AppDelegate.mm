@@ -1,6 +1,6 @@
 #import <Firebase.h>
+#import <FBSDKCoreKit/FBSDKCoreKit-swift.h>
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
 
 @implementation AppDelegate
@@ -8,9 +8,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [FIRApp configure];
+  [[FBSDKApplicationDelegate sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions];
   self.moduleName = @"userMobileApp";
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
+{
+  return [[FBSDKApplicationDelegate sharedInstance]application:app
+                                                      openURL:url
+                                                      options:options];
+}
+
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
