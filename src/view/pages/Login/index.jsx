@@ -24,7 +24,7 @@ const Login = () => {
     catch (error) {
       // ignore
     }
-  }, [])
+  }, [state.firebase])
 
   return (
     <SafeAreaView >
