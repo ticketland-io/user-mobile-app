@@ -53,4 +53,38 @@ export const getTheme = () => createTheme({
       ...colors
     }
   },
+  Text: (prop) => ({
+    style: prop.h5 && {fontSize: 8, color: colors.red},
+  }),
+  components: {
+    Text: (prop) => ({
+      h1Style: {
+        color: colors.gray800,
+        fontSize: 36,
+        lineHeight: 40
+      },
+      style: (
+        prop.h1Bold &&
+        {
+          color: colors.gray800,
+          fontSize: 36,
+          fontWeight: 'bold',
+          lineHeight: 40
+        }) ||
+        (prop.h6 &&
+        {
+          color: colors.gray800,
+          fontWeight: 400,
+          fontSize: 16,
+          lineHeight: 20
+        }) ||
+        (prop.h6Bold &&
+        {
+          color: colors.gray800,
+          fontWeight: 700,
+          fontSize: 16,
+          lineHeight: 20
+        }),
+    }),
+  }
 })
