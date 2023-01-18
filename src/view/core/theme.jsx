@@ -58,6 +58,9 @@ export const getTheme = () => createTheme({
   }),
   components: {
     Text: (prop) => ({
+      style: {
+        fontFamily: 'Poppins-Regular'
+      },
       h1Style: {
         color: colors.gray800,
         fontSize: 36,
