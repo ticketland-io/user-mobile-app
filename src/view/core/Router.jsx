@@ -14,14 +14,12 @@ const Router = props => {
   const classes = styles()
 
   return (
-    <View className={classes.root}>
+    <View style={classes.root}>
       <NativeRouter>
-        <View className={classes.pageContainer} >
-          <Routes>
-            <Route exact strict path='/' element={<Home />} />
-            <Route exact strict path='/login' element={<Login />} />
-          </Routes>
-        </View>
+        <Routes>
+          <Route exact strict path='/' element={<Login />} />
+          <Route exact strict path='/home' element={<Home />} />
+        </Routes>
       </NativeRouter>
     </View>
   )
