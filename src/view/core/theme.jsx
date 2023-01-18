@@ -53,9 +53,6 @@ export const getTheme = () => createTheme({
       ...colors
     }
   },
-  Text: (prop) => ({
-    style: prop.h5 && {fontSize: 8, color: colors.red},
-  }),
   components: {
     Text: (prop) => ({
       style: {
