@@ -7,11 +7,11 @@ import Shadow from '../../components/Shadow'
 import FacebookIcon from '../../../assets/facebookIcon.png';
 import GoogleIcon from '../../../assets/googleIcon.png';
 import Circle from '../../../assets/circle.png';
-import styles from './styles'
+import useStyle from './styles'
 
 const Login = () => {
   const [state, dispatch] = useContext(Context)
-  const classes = styles()
+  const classes = useStyle()
 
   const providerImages = {
     google: GoogleIcon,
