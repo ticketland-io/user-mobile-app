@@ -35,7 +35,7 @@ const Login = () => {
           break;
       }
 
-      navigate('/profile')
+      navigate('/home')
     }
     catch (error) {
       // ignore
@@ -44,7 +44,7 @@ const Login = () => {
 
   useEffect(() => {
     if (state.user) {
-      navigate('/profile')
+      navigate('/home')
     }
   }, [state.user])
 
