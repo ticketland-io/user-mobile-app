@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1041096392429",
+    "project_id": "eutopic-staging-efa58",
+    "storage_bucket": "eutopic-staging-efa58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1041096392429:android:f08d310764af59a2bc96e4",
+        "android_client_info": {
+          "package_name": "com.usermobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1041096392429-t92h90h7naekc8arct1oteuc183qqhv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsgi8KYr-ZeqhqtQWlfLogJTp5SvLAC5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1041096392429-t92h90h7naekc8arct1oteuc183qqhv9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1041096392429-3b25pom5gopqd7qcvnc5be9j737ul47l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.userMobileApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

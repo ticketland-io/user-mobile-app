@@ -10,13 +10,5 @@ export default makeStyles(theme => ({
     flexDirection: 'column',
     alignItems: 'stretch',
     flexWrap: 'nowrap'
-  },
-  pageContainer: {
-    flexGrow: 1,
-    height: '100%',
-    display: 'flex',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
+  }
 }))

@@ -8,20 +8,18 @@ import {
 } from 'react-router-native'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
-import styles from './styles'
+import useStyle from './styles'
 
 const Router = props => {
-  const classes = styles()
+  const classes = useStyle()
 
   return (
-    <View className={classes.root}>
+    <View style={classes.root}>
       <NativeRouter>
-        <View className={classes.pageContainer} >
-          <Routes>
-            <Route exact strict path='/' element={<Home />} />
-            <Route exact strict path='/login' element={<Login />} />
-          </Routes>
-        </View>
+        <Routes>
+          <Route exact strict path='/' element={<Login />} />
+          <Route exact strict path='/home' element={<Home />} />
+        </Routes>
       </NativeRouter>
     </View>
   )
