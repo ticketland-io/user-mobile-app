@@ -69,8 +69,12 @@ const Login = () => {
           <View justifyContent='center'>
             <View style={{marginBottom: 24}}>
               <Text alignSelf='center' style={{marginBottom: 24}}>
-                <Text h6>Sign in with </Text>
-                <Text h6Bold>social media</Text>
+                <Text h6>
+                  {`Sign in with `}
+                </Text>
+                <Text h6Bold>
+                  social media
+                </Text>
               </Text>
               <Divider />
             </View>
