@@ -1,7 +1,7 @@
-import React, {useCallback, useContext, useEffect} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {SafeAreaView, View, ImageBackground} from 'react-native'
-import {useNavigate} from 'react-router-native'
 import {Button, Image, Text, Divider} from '@rneui/themed'
+import {useNavigate} from 'react-router-native'
 import {Context} from '../../core/Store'
 import {capitalizeFirstLetter} from '../../../helpers/format'
 import Shadow from '../../components/Shadow'
@@ -20,7 +20,7 @@ const Login = () => {
     facebook: FacebookIcon
   }
 
-  const logIn = provider => useCallback(async () => {
+  const logIn = provider => async () => {
     try {
       switch (provider) {
         case 'google': {
@@ -40,7 +40,7 @@ const Login = () => {
     catch (error) {
       // ignore
     }
-  }, [])
+  }
 
   useEffect(() => {
     if (state.user) {
