@@ -1,5 +1,6 @@
-import React, {useCallback, useContext} from 'react'
+import React, {useCallback, useContext, useEffect} from 'react'
 import {SafeAreaView, View, ImageBackground} from 'react-native'
+import {useNavigate} from 'react-router-native'
 import {Button, Image, Text, Divider} from '@rneui/themed'
 import {Context} from '../../core/Store'
 import {capitalizeFirstLetter} from '../../../helpers/format'
@@ -12,6 +13,7 @@ import useStyle from './styles'
 const Login = () => {
   const [state, dispatch] = useContext(Context)
   const classes = useStyle()
+  const navigate = useNavigate()
 
   const providerImages = {
     google: GoogleIcon,
@@ -32,11 +34,20 @@ const Login = () => {
         default:
           break;
       }
+
+      navigate('/profile')
     }
     catch (error) {
       // ignore
     }
   }, [])
+
+  useEffect(() => {
+    if (state.user) {
+      navigate('/profile')
+    }
+  }, [state.user])
+
 
   const renderProviderButtons = provider => (
     <Button
