@@ -1,4 +1,4 @@
-import React, {useCallback, useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import {SafeAreaView, Platform} from 'react-native'
 import AsyncButton from '../../components/AsyncButton'
 import {Context} from '../../core/Store'
@@ -6,7 +6,7 @@ import {Context} from '../../core/Store'
 const Login = () => {
   const [state, dispatch] = useContext(Context)
 
-  const logIn = (provider) => useCallback(async () => {
+  const logIn = (provider) => async () => {
     try {
       switch (provider) {
         case 'google': {
@@ -24,7 +24,7 @@ const Login = () => {
     catch (error) {
       // ignore
     }
-  }, [state.firebase])
+  }
 
   return (
     <SafeAreaView >
