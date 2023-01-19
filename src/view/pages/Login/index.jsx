@@ -6,7 +6,7 @@ import {Context} from '../../core/Store'
 const Login = () => {
   const [state, dispatch] = useContext(Context)
 
-  const logIn = (provider) => async () => {
+  const logIn = provider => async () => {
     try {
       switch (provider) {
         case 'google': {
