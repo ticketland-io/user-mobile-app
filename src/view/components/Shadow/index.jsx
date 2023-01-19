@@ -8,7 +8,9 @@ const Shadow = (props) => {
 
   return (
     <View style={[style, classes.root]} {...rest}>
-      {children}
+      <View style={classes.inner}>
+        {children}
+      </View>
     </View>
   )
 }

@@ -10,6 +10,10 @@ export default makeStyles(theme => ({
     margin: 10,
     marginBottom: 20,
     borderColor: theme.palette.common.yellow500,
-    backgroundColor: theme.palette.common.white
+    backgroundColor: theme.palette.common.white,
+  },
+  inner: {
+    borderRadius: 16,
+    overflow: 'hidden'
   }
 }))
