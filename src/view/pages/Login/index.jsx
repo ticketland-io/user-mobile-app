@@ -11,7 +11,7 @@ import Circle from '../../../assets/circle.png';
 import useStyle from './styles'
 
 const Login = () => {
-  const [state, dispatch] = useContext(Context)
+  const [state, _] = useContext(Context)
   const classes = useStyle()
   const navigate = useNavigate()
 
