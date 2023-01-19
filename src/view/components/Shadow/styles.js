@@ -6,7 +6,7 @@ export default makeStyles(theme => ({
     shadowColor: theme.palette.common.black,
     shadowOffset: {width: 5, height: 10},
     shadowOpacity: 1,
-    borderRadius: 50,
+    borderRadius: 16,
     margin: 10,
     marginBottom: 20,
     borderColor: theme.palette.common.yellow500,
