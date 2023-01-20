@@ -48,7 +48,6 @@ const Login = () => {
     }
   }, [state.user])
 
-
   const renderProviderButtons = provider => (
     <Button
       onPress={logIn(provider)}
