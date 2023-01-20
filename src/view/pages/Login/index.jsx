@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import {SafeAreaView, View, ImageBackground} from 'react-native'
 import {Button, Image, Text, Divider} from '@rneui/themed'
 import {useNavigate} from 'react-router-native'

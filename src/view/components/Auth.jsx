@@ -1,13 +1,15 @@
 import React, {useEffect, useContext} from 'react'
 import {Context} from '../core/Store'
-import {setUser} from '../../data/actions'
+import {setUser, setLoading} from '../../data/actions'
 
 const Auth = () => {
   const [state, dispatch] = useContext(Context)
 
   useEffect(() => {
     state.firebase.onUserChanged(currentUser => {
+      dispatch(setLoading(true))
       dispatch(setUser(currentUser))
+      dispatch(setLoading(false))
     })
   }, [])
 
