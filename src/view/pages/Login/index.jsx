@@ -42,12 +42,6 @@ const Login = () => {
     }
   }
 
-  useEffect(() => {
-    if (state.user) {
-      navigate('/home')
-    }
-  }, [state.user])
-
   const renderProviderButtons = provider => (
     <Button
       onPress={logIn(provider)}
