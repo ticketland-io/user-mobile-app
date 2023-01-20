@@ -9,6 +9,8 @@ const Splash = () => {
   useEffect(() => {
     if (state.user) {
       navigate('/home')
+    }else{
+      navigate('/login')
     }
   }, [state.user])
 
