@@ -8,11 +8,11 @@ import Shadow from '../../components/Shadow'
 import FacebookIcon from '../../../assets/facebookIcon.png';
 import GoogleIcon from '../../../assets/googleIcon.png';
 import Circle from '../../../assets/circle.png';
-import useStyle from './styles'
+import useStyles from './styles'
 
 const Login = () => {
   const [state, _] = useContext(Context)
-  const classes = useStyle()
+  const classes = useStyles()
   const navigate = useNavigate()
 
   const providerImages = {

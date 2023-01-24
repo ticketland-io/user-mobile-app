@@ -1,10 +1,10 @@
 import React from 'react'
 import {View} from 'react-native'
-import useStyle from './styles'
+import useStyles from './styles'
 
 const Shadow = (props) => {
   const {children, style = '', ...rest} = props
-  const classes = useStyle()
+  const classes = useStyles()
 
   return (
     <View style={[style, classes.root]} {...rest}>

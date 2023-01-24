@@ -9,10 +9,10 @@ import {
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Splash from '../pages/Splash'
-import useStyle from './styles'
+import useStyles from './styles'
 
 const Router = props => {
-  const classes = useStyle()
+  const classes = useStyles()
 
   return (
     <View style={classes.root}>
