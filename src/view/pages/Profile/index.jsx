@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {SafeAreaView, View} from 'react-native'
 import AntIcon from "react-native-vector-icons/AntDesign";
 import {useNavigate, useLocation} from 'react-router-native'
@@ -42,7 +42,7 @@ const Profile = () => {
             <Button
               type={'outline'}
               onPress={goBack}
-              style={classes.backButton}
+              buttonStyle={classes.backButton}
             >
               <AntIcon
                 name="left"
