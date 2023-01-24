@@ -10,12 +10,12 @@ const theme = getTheme()
 const App = () => {
 
   return (
-    <Store>
-      <ThemeProvider theme={theme}>
-        <Auth />
-        <Router />
-      </ThemeProvider>
-    </Store>
+      <Store>
+        <ThemeProvider theme={theme}>
+          <Auth />
+          <Router />
+        </ThemeProvider>
+      </Store>
   )
 }
 
