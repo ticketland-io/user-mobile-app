@@ -13,9 +13,9 @@ const Profile = () => {
   const navigate = useNavigate()
   const location = useLocation()
 
-  const signOut = () => {
+  const signOut = async () => {
     try {
-      state.firebase.signOutUser()
+      await state.firebase.signOutUser()
     } catch (error) {
       //ignore
     }
