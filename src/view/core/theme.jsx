@@ -71,6 +71,13 @@ export const getTheme = () => createTheme({
           fontWeight: 'bold',
           lineHeight: 40
         }) ||
+        (prop.h4 &&
+        {
+          color: colors.gray800,
+          fontWeight: 400,
+          fontSize: 24,
+          lineHeight: 32
+        }) ||
         (prop.h6 &&
         {
           color: colors.gray800,
@@ -84,7 +91,27 @@ export const getTheme = () => createTheme({
           fontWeight: 700,
           fontSize: 16,
           lineHeight: 20
-        }),
+        }) ||
+        (prop.h7 &&
+        {
+          color: colors.gray800,
+          fontWeight: 400,
+          fontSize: 14,
+          lineHeight: 20
+        }) ||
+        (prop.email &&
+        {
+          color: colors.gray300,
+          fontWeight: 400,
+          fontSize: 16,
+          lineHeight: 24
+        })
     }),
+    Button: {
+      buttonStyle: {
+        borderColor: colors.gray500,
+        borderRadius: 8
+      }
+    }
   }
 })
