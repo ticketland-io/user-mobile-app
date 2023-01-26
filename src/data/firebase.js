@@ -58,7 +58,7 @@ const accessToken = async () => {
 }
 
 const onUserChanged = (_, ...args) => curAuth.onIdTokenChanged(...args)
-const signOutUser = () => curAuth.signOut()
+const signOutUser = async () => await curAuth.signOut()
 
 const Auth = Record({
   googleConfigure,
