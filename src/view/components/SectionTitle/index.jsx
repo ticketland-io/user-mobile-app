@@ -1,21 +1,24 @@
 import React from 'react'
 import {View} from 'react-native'
 import {Text} from '@rneui/themed'
-import {capitalizeFirstLetter} from '../../../helpers/format';
+import {capitalizeFirstLetter} from '../../../helpers/string';
 import useStyles from './styles'
 
 const SectionTitle = props => {
   const {
     title = '',
     secondaryTitle = 'events',
-    style = ''
+    style = '',
+    innerStyle = ''
   } = props
   const classes = useStyles()
 
   return (
     <View style={[classes.root, style]}>
-      <Text title>{capitalizeFirstLetter(title)} </Text>
-      <Text title style={classes.eventsText}>{secondaryTitle}</Text>
+      <View style={[classes.innerRoot, innerStyle]}>
+        <Text title>{capitalizeFirstLetter(title)} </Text>
+        <Text subTitle >{secondaryTitle}</Text>
+      </View>
     </View>
   );
 };
