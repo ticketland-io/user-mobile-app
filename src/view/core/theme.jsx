@@ -1,4 +1,5 @@
 import {createTheme} from '@rneui/themed'
+import {Platform} from 'react-native'
 
 const colors = {
   black: '#000000',
@@ -29,7 +30,8 @@ const colors = {
   error: '#E24A30',
   red: '#E24A30',
   red100: '#b5432f',
-  green100: '#60b563'
+  green100: '#60b563',
+  shadow: '#303030'
 }
 
 export const getTheme = () => createTheme({
@@ -78,6 +80,13 @@ export const getTheme = () => createTheme({
           fontSize: 24,
           lineHeight: 32
         }) ||
+        (prop.h5 &&
+        {
+          color: colors.gray800,
+          fontWeight: 400,
+          fontSize: 18,
+          lineHeight: 36
+        }) ||
         (prop.h6 &&
         {
           color: colors.gray800,
@@ -88,7 +97,7 @@ export const getTheme = () => createTheme({
         (prop.h6Bold &&
         {
           color: colors.gray800,
-          fontWeight: 700,
+          fontWeight: Platform.OS === 'android' ? 'bold' : 600,
           fontSize: 16,
           lineHeight: 20
         }) ||
@@ -109,8 +118,29 @@ export const getTheme = () => createTheme({
         (prop.title &&
         {
           color: colors.gray800,
-          fontWeight: 600,
+          fontWeight: Platform.OS === 'android' ? 'bold' : 600,
           fontSize: 24
+        }) ||
+        (prop.subTitle &&
+        {
+          color: colors.gray800,
+          fontWeight: 500,
+          fontSize: 24
+        }) ||
+        (prop.eventName &&
+        {
+          color: colors.gray800,
+          fontWeight: 500,
+          fontSize: 16,
+          lineHeight: 18
+        }) ||
+        (prop.pagination &&
+        {
+          color: colors.gray800,
+          fontWeight: 500,
+          fontSize: 16,
+          lineHeight: 24,
+          fontFamily: 'Montserrat-Regular'
         })
     }),
     Button: {
